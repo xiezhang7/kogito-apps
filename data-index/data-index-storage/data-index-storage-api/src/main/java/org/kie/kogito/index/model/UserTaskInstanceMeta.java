@@ -24,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserTaskInstanceMeta {
 
+    @JsonProperty("_id")
     private String id;
     @JsonProperty("taskDescription")
     private String description;

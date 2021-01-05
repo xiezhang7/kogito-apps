@@ -16,14 +16,15 @@
 
 package org.kie.kogito.index.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class ProcessInstanceMeta {
 
+    @JsonProperty("_id")
     private String id;
     private String processId;
     private String processName;
@@ -75,11 +76,11 @@ public class ProcessInstanceMeta {
     public void setState(Integer state) {
         this.state = state;
     }
-    
+
     public String getBusinessKey() {
         return businessKey;
     }
-    
+
     public void setBusinessKey(String businessKey) {
         if (businessKey != null && !businessKey.trim().isEmpty()) {
             this.businessKey = businessKey;

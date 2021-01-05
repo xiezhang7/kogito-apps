@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodeInstance {
 
+    @JsonProperty("_id")
     private String id;
     @JsonProperty("nodeName")
     private String name;

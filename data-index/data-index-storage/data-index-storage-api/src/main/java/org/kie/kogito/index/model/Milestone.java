@@ -16,8 +16,11 @@
 
 package org.kie.kogito.index.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Milestone {
 
+    @JsonProperty("_id")
     private String id;
     private String name;
     private String status;

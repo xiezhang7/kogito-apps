@@ -34,6 +34,7 @@ public abstract class KogitoCloudEvent<T> {
     private String contentType;
     private String subject;
     private T data;
+    private String _id;
 
     //Extensions
     @JsonProperty("kogitoProcessinstanceId")
@@ -167,6 +168,14 @@ public abstract class KogitoCloudEvent<T> {
 
     public void setSubject(String subject) {
         this.subject = subject;
+    }
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
     }
 
     @Override
